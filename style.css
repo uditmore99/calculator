@@ -1,0 +1,68 @@
+* {
+    /* border: solid white 2px; */
+}
+
+html,
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.neumorMain {
+    border-radius: 36px;
+    background: linear-gradient(145deg, #0068ca, #0057aa);
+    /* box-shadow:  19px 19px 38px #004484,
+             -19px -19px 38px #007ef6; */
+}
+
+#mainCalc {
+    height: 600px;
+    width: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+
+.neumorDisplay {
+    border-radius: 36px;
+    background: linear-gradient(145deg, #a9dfff, #8ebbe6);
+    padding: 10px;
+    font-size: 50px;
+
+    /* box-shadow:  19px 19px 38px #6f92b3,
+             -19px -19px 38px #cdffff; */
+}
+
+#displayCalc {
+    display: flex;
+    height: 90px;
+    justify-content: end;
+    align-items: center;
+}
+
+.rowParent {
+    /* height: 360px; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.calcBtn {
+    height: 75px;
+    width: 75px;
+    margin: auto;
+    margin-top: 18px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #a9dfff, #8ebbe6);
+    text-align: center;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+#equals {
+    width: 165px;
+}
