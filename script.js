@@ -290,3 +290,29 @@ function percentNum(expressionTwo) {
   console.log("ans = " + expressionOne);
   return expressionOne;
 }
+
+//neumorMain
+//neumorDisplay
+//calcBtn
+
+const toggleBtn = document.getElementById("toggle");
+
+toggleBtn.addEventListener("click", () => {
+  var mainCalc = document.getElementsByClassName("neumorMain")[0];
+  var mainCalcDisplay = document.getElementsByClassName("neumorDisplay")[0];
+
+  //var mainCalcBtn = document.getElementsByClassName("calcBtn");
+  var darkModeCondition = false;
+
+  mainCalc.classList.toggle("neumorMainDark");
+  mainCalcDisplay.classList.toggle("neumorDisplayDark");
+
+  for (var i = 0; i < document.getElementsByClassName("calcBtn").length; i++) {
+    var mainCalcBtn = document.getElementsByClassName("calcBtn")[i];
+    mainCalcBtn.classList.toggle("calcBtnDark");
+    //document.html.style.backgroundColor = "#16202f";
+    document.body.classList.toggle("darkMode");
+  }
+
+  darkModeCondition = true;
+});

@@ -4,21 +4,90 @@
 
 html,
 body {
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Roboto', sans-serif; */
+    background-color: white;
+    /* color: white; */
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100%;
 }
+
+.darkMode {
+    background-color: #16202f;
+}
+
+#toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 72px;
+    height: 32px;
+
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: solid black 2px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color ease 0.3s;
+}
+
+#toggle:before {
+    content: "DARK LIGHT";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    background: black;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    font: 10px/28px Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: -33px;
+    word-spacing: 33px;
+    color: black;
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+#toggle:checked {
+    background-color: #16202f;
+    outline: solid #16202f 2px;
+}
+
+#toggle:checked:before {
+    left: 42px;
+    background: white;
+    color: white;
+
+}
+
+/* yaha tk */
 
 .neumorMain {
     border-radius: 36px;
-    background: linear-gradient(145deg, #0068ca, #0057aa);
-    /* box-shadow:  19px 19px 38px #004484,
-             -19px -19px 38px #007ef6; */
+    background: #d4e0e8;
+    box-shadow: 20px 20px 60px #b4bec5,
+        -20px -20px 60px #f4ffff;
+}
+
+.neumorMainDark {
+    border-radius: 36px;
+    background: #1d2b3e;
+    box-shadow: 20px 20px 60px #0c1119,
+        -20px -20px 60px #2e4563;
 }
 
 #mainCalc {
-    height: 600px;
-    width: 360px;
+    height: 500px;
+    width: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -29,12 +98,23 @@ body {
 
 .neumorDisplay {
     border-radius: 36px;
-    background: linear-gradient(145deg, #a9dfff, #8ebbe6);
+    background: #d4dfe8;
+    box-shadow: 20px 20px 60px #b4bec5,
+        -20px -20px 60px #f4ffff;
     padding: 10px;
     font-size: 50px;
 
-    /* box-shadow:  19px 19px 38px #6f92b3,
-             -19px -19px 38px #cdffff; */
+}
+
+.neumorDisplayDark {
+    border-radius: 36px;
+    color: white;
+    background: linear-gradient(145deg, #1a2738, #1f2e42);
+    box-shadow: 5px 5px 11px #16202f,
+        -5px -5px 11px #24364e;
+    padding: 10px;
+    font-size: 50px;
+
 }
 
 #displayCalc {
@@ -52,17 +132,34 @@ body {
 }
 
 .calcBtn {
-    height: 75px;
-    width: 75px;
+    height: 66px;
+    width: 66px;
     margin: auto;
-    margin-top: 18px;
+    margin-top: 10px;
     border-radius: 18px;
-    background: linear-gradient(145deg, #a9dfff, #8ebbe6);
+    background: #d4dfe8;
+    box-shadow: 20px 20px 60px #b4bec5,
+        -20px -20px 60px #f4ffff;
     text-align: center;
-    line-height: 75px;
+    line-height: 66px;
+    cursor: pointer;
+}
+
+.calcBtnDark {
+    height: 66px;
+    width: 66px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 18px;
+    color: white;
+    background: linear-gradient(145deg, #1f2e42, #1a2738);
+    box-shadow: 5px 5px 11px #16202f,
+        -5px -5px 11px #24364e;
+    text-align: center;
+    line-height: 66px;
     cursor: pointer;
 }
 
 #equals {
-    width: 165px;
+    width: 148px;
 }
